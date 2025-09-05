@@ -1,0 +1,53 @@
+{
+  "sections": [
+    {
+      "id": "A",
+      "name": "Station A",
+      "type": "station",
+      "tracks": ["main", "loop"],
+      "coordinates": {"x": 0, "y": 0}
+    },
+    {
+      "id": "AB",
+      "name": "Section A-B",
+      "type": "single_track",
+      "tracks": ["main"],
+      "coordinates": {"x": 50, "y": 0}
+    },
+    {
+      "id": "B",
+      "name": "Station B",
+      "type": "station",
+      "tracks": ["main", "loop"],
+      "coordinates": {"x": 100, "y": 0}
+    },
+    {
+      "id": "BC",
+      "name": "Section B-C",
+      "type": "single_track",
+      "tracks": ["main"],
+      "coordinates": {"x": 150, "y": 0}
+    },
+    {
+      "id": "C",
+      "name": "Station C",
+      "type": "station",
+      "tracks": ["main", "loop"],
+      "coordinates": {"x": 200, "y": 0}
+    }
+  ],
+  "distances": {
+    "A-AB": 0,
+    "AB-B": 10,
+    "B-BC": 15,
+    "BC-C": 25
+  },
+  "signals": [
+    {"id": "S1", "location": "A", "type": "departure"},
+    {"id": "S2", "location": "AB", "type": "block"},
+    {"id": "S3", "location": "B", "type": "arrival"},
+    {"id": "S4", "location": "B", "type": "departure"},
+    {"id": "S5", "location": "BC", "type": "block"},
+    {"id": "S6", "location": "C", "type": "arrival"}
+  ]
+}

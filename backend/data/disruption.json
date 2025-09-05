@@ -1,0 +1,43 @@
+{
+  "disruptions": [
+    {
+      "id": "D001",
+      "type": "delay",
+      "train_id": "T001",
+      "location": "A",
+      "delay_minutes": 10,
+      "inject_at": "09:05",
+      "reason": "Signal failure",
+      "description": "Train T001 delayed by 10 minutes at Station A due to signal failure"
+    },
+    {
+      "id": "D002",
+      "type": "equipment_failure",
+      "train_id": "T003",
+      "location": "B",
+      "delay_minutes": 15,
+      "inject_at": "09:55",
+      "reason": "Engine trouble",
+      "description": "Freight train T003 delayed by 15 minutes at Station B due to engine trouble",
+      "active": false
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "SCENARIO_1",
+      "name": "Basic Conflict Demonstration",
+      "description": "Single delay causing downstream conflict",
+      "active_disruptions": ["D001"]
+    },
+    {
+      "id": "SCENARIO_2",
+      "name": "Multiple Disruptions",
+      "description": "Multiple simultaneous disruptions",
+      "active_disruptions": ["D001", "D002"]
+    }
+  ],
+  "metadata": {
+    "created": "2025-09-05",
+    "description": "Disruption scenarios for prototype demonstration"
+  }
+}

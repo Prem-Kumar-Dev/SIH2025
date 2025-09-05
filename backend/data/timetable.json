@@ -1,0 +1,52 @@
+{
+  "trains": [
+    {
+      "id": "T001",
+      "name": "Express 001",
+      "type": "passenger",
+      "route": ["A", "AB", "B", "BC", "C"],
+      "schedule": {
+        "A": {"arrival": "09:00", "departure": "09:05"},
+        "AB": {"arrival": "09:15", "departure": "09:15"},
+        "B": {"arrival": "09:25", "departure": "09:30"},
+        "BC": {"arrival": "09:40", "departure": "09:40"},
+        "C": {"arrival": "09:50", "departure": "09:55"}
+      },
+      "priority": 1
+    },
+    {
+      "id": "T002",
+      "name": "Local 002",
+      "type": "passenger",
+      "route": ["C", "BC", "B", "AB", "A"],
+      "schedule": {
+        "C": {"arrival": "09:10", "departure": "09:15"},
+        "BC": {"arrival": "09:25", "departure": "09:25"},
+        "B": {"arrival": "09:35", "departure": "09:40"},
+        "AB": {"arrival": "09:50", "departure": "09:50"},
+        "A": {"arrival": "10:00", "departure": "10:05"}
+      },
+      "priority": 2
+    },
+    {
+      "id": "T003",
+      "name": "Freight 003",
+      "type": "freight",
+      "route": ["A", "AB", "B", "BC", "C"],
+      "schedule": {
+        "A": {"arrival": "09:20", "departure": "09:25"},
+        "AB": {"arrival": "09:40", "departure": "09:40"},
+        "B": {"arrival": "09:55", "departure": "10:00"},
+        "BC": {"arrival": "10:15", "departure": "10:15"},
+        "C": {"arrival": "10:30", "departure": "10:35"}
+      },
+      "priority": 3
+    }
+  ],
+  "metadata": {
+    "created": "2025-09-05",
+    "description": "Simple 3-train scenario for prototype demonstration",
+    "total_trains": 3,
+    "time_span": "09:00-10:35"
+  }
+}
